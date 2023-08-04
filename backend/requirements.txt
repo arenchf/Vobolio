@@ -1,0 +1,19 @@
+#Django etc.
+django==4.2
+djangorestframework==3.14
+django-cors-headers==4.2
+gunicorn==21.2
+
+#DB-Postgres
+psycopg2==2.9.6
+psycopg2-binary==2.9.6
+
+#env
+python-dotenv==1.0.0
+
+#misc
+packaging==23.1
+asgiref==3.7.2
+pytz==2023.3
+sqlparse==0.4.4
+tzdata==2023.3
