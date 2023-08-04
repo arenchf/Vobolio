@@ -22,18 +22,18 @@ services:
       - db
     entrypoint: /entrypoint.sh
     volumes:
-      - staticfiles:/backend/staticfiles
+      - static:/backend/static
   nginx:
     build: 
       context: .
       dockerfile: ./webserver/Dockerfile
     restart: always
     volumes:
-      - staticfiles:/staticfiles
+      - static:/static
     ports:
       - "80:80"
     depends_on:
       - backend
 volumes:
   postgres_data:
-  staticfiles:
+  static:
