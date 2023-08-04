@@ -29,7 +29,7 @@ services:
       dockerfile: ./webserver/Dockerfile
     restart: always
     volumes:
-      - static:/static
+      - static:/staticfiles
     ports:
       - "80:80"
     depends_on:
