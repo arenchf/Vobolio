@@ -9,7 +9,7 @@ psycopg2==2.9.6
 psycopg2-binary==2.9.6
 
 #env
-python-dotenv==1.0.0
+django-environ==0.10.0
 
 #misc
 packaging==23.1
