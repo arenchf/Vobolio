@@ -48,4 +48,4 @@ services:
     # command: certonly --webroot -w /var/www/certbot --force-renewal --email arenchf@gmail.com -d vobolio.com --agree-tos
 volumes:
   postgres_data:
-  static:
+  staticfiles:
