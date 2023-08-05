@@ -10,7 +10,7 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env.local'))
 
 SECRET_KEY = os.environ.get('SECRET_KEY',env("SECRET_KEY"))
 
-DEBUG = os.environ.get('DEBUG',env("DEBUG",default=1))
+DEBUG = int(os.environ.get('DEBUG',env("DEBUG",default=1)))
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS',env("ALLOWED_HOSTS",default="")).split(' ')
 
@@ -35,6 +35,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://vobolio.com',
+    'https://www.vobolio.com'
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -107,8 +112,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL = "/staticfiles/"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 AUTH_USER_MODEL = "authentication.User"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
