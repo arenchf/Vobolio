@@ -1,4 +1,4 @@
 /env
 .env.local
-*/*migrations/
+# */*migrations/ # Migrations should be commited
 */*__pycache__/
