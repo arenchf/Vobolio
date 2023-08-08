@@ -24,9 +24,10 @@ services:
     volumes:
       - staticfiles:/backend/staticfiles
   nginx:
-    build: 
-      context: .
-      dockerfile: ./webserver/Dockerfile
+    image: arenchf/dock
+    # build: 
+    #   context: .
+    #   dockerfile: ./webserver/Dockerfile
     restart: always
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     volumes:
