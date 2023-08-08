@@ -4,7 +4,7 @@ WORKDIR /frontend
 COPY ./frontend/package*.json ./
 RUN npm install
 COPY ./frontend/ ./
-CMD ["npm","run","build"]
+RUN npm run build
 
 
 FROM nginx:1.18.0-alpine
