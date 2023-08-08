@@ -1,0 +1,97 @@
+.c-word-list-item {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px 4px 4px 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    box-sizing: border-box;
+    height: 50px;
+    // padding-inline-start: 5px;
+    padding-inline-end: 15px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .left {
+        padding-left: 5px;
+        display: flex;
+        flex: 0 0 auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 5px;
+        min-width: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 100%;
+        .word-progress {
+            background-color: #f99f38;
+            flex: 0 0 auto;
+            color: white;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            font-size: small;
+            position: relative;
+            // transform: ;
+            transition: transform 0.1s ease-in-out;
+        }
+        .word-main {
+            display: flex;
+            flex: 0 1 auto;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .word-word {
+                // width: fit-content;
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .word-translation {
+                width: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+    .right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        // padding-right: 10px;
+        gap: 10px;
+        .word-edit-button {
+            color: #ccc;
+            transition: color 0.1s ease-in-out;
+            height: fit-content;
+            svg {
+                display: block;
+            }
+        }
+    }
+
+    &:hover {
+        .left {
+            .word-progress {
+                // height: 46px;
+                transform: scale(1.1);
+                // width: 46px;
+            }
+        }
+        .right {
+            .word-edit-button {
+                color: black;
+            }
+        }
+    }
+}

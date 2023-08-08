@@ -16,8 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('api/admin/', admin.site.urls),
+    path('api/v1/',include(("dictionaries.urls","dictionaries"),namespace="v1")),
+    path('api/v1/',include(("authentication.urls","authentication"),namespace="v1")),
+    # path('api/v1/',include(("dictionaries.urls","dictionaries"),namespace="v1")),
+    # path('api/v2/users/',include(("dictionaries.urls","dictionaries"),namespace="v2")),
+    # path('api/v2/dictionaries/',include(("dictionaries.urls","dictionaries"),namespace="v2"))
     # path("", include("words.urls")),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

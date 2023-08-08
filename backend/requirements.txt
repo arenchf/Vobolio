@@ -8,6 +8,9 @@ gunicorn==21.2
 psycopg2==2.9.6
 psycopg2-binary==2.9.6
 
+#img
+pillow==10.0
+
 #env
 django-environ==0.10.0
 
@@ -17,3 +20,14 @@ asgiref==3.7.2
 pytz==2023.3
 sqlparse==0.4.4
 tzdata==2023.3
+
+#django-cryptography
+django-cryptography==1.1
+cffi==1.15.1
+cryptography==41.0.3
+django-appconf==1.0.5
+pycparser==2.21
+
+#jwt
+djangorestframework-simplejwt==5.2
+pyjwt==2.8

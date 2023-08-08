@@ -1,6 +1,6 @@
-import os
+import os,environ
 from pathlib import Path
-import environ
+from datetime import timedelta
 
 env = environ.Env()
 
@@ -13,6 +13,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY',env("SECRET_KEY"))
 DEBUG = int(os.environ.get('DEBUG',env("DEBUG",default=1)))
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS',env("ALLOWED_HOSTS",default="")).split(' ')
+CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS',env("CORS_ALLOWED_ORIGINS",default="")).split(' ')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -96,6 +97,25 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=90),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -114,6 +134,10 @@ USE_TZ = True
 
 STATIC_URL = "/staticfiles/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/api/uploads/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+
 
 AUTH_USER_MODEL = "authentication.User"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
