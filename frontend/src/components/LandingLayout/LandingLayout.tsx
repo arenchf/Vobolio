@@ -41,7 +41,7 @@ function LandingLayout() {
                         <>
                             <div
                                 onClick={() => {
-                                    auth?.login("demo", "demo123123");
+                                    auth?.login("demo", "demo");
                                 }}
                                 className="landing-btn-header"
                             >
