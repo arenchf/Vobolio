@@ -22,7 +22,7 @@ services:
       - db
     entrypoint: /entrypoint.sh
     volumes:
-      - media:/backend/uploads
+      - .:/code
       - staticfiles:/backend/staticfiles
   nginx:
     image: arenchf/dock
@@ -51,4 +51,4 @@ services:
 volumes:
   postgres_data:
   staticfiles:
-  media:
+  # media:
