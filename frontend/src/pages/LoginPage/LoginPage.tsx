@@ -1,14 +1,12 @@
 import React, { useContext } from "react";
 import AuthContext, { IAuthContext } from "../../contexts/AuthContext";
+import { toast } from "react-toastify";
 
 function LoginPage() {
     const auth = useContext<IAuthContext | null>(AuthContext);
 
     const handleLogin = () => {
-        if (auth) {
-            auth?.login("admin", "123123");
-        } else {
-        }
+        toast.error("Not Implemented");
     };
 
     return (

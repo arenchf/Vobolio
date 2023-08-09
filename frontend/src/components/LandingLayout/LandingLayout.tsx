@@ -47,12 +47,12 @@ function LandingLayout() {
                             >
                                 Demo
                             </div>
-                            <div className="landing-btn-header">
+                            {/* <div className="landing-btn-header">
                                 <Link to={"/login"}>Login</Link>
                             </div>
                             <div className="landing-btn-header">
                                 <Link to={"/register"}>Register</Link>
-                            </div>
+                            </div> */}
                         </>
                     ) : (
                         <>
