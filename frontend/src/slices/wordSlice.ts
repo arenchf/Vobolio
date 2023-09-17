@@ -29,21 +29,17 @@ export const WordSlice = createSlice({
                 state.words.findIndex((val) => val.id === action.payload.id)
             ] = action.payload;
         },
-        clearWords: (state) => {
+        clearWordSlice: (state) => {
             return { ...initialState };
         },
-        addMultipleWords: (
-            state,
-            action: PayloadAction<{ wordArray: Word[]; offset: boolean }>
-        ) => {
+        addMultipleWords: (state, action: PayloadAction<Word[]>) => {
             // console.log('ac', ac)
-            action.payload.wordArray.forEach((val, index) => {
-                if (state.words.indexOf(val) === -1) {
+            action.payload.forEach((val, index) => {
+                if (
+                    state.words.filter((word) => word.id === val.id).length ===
+                    0
+                ) {
                     state.words.push(val);
-                    state.count++;
-                    if (action.payload.offset) {
-                        state.offset++;
-                    }
                 }
             });
         },
@@ -60,7 +56,7 @@ export default WordSlice;
 export const {
     addWord,
     editWord,
-    clearWords,
+    clearWordSlice,
     addMultipleWords,
     selectWord,
     clearSelectedWords,

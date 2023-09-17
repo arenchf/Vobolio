@@ -18,7 +18,16 @@ export default interface Word {
     last_decline?: string;
 }
 
-export interface NewWord {
+export interface WordTraining extends Word {
+    right?: boolean;
+}
+
+export interface WordOption extends Word {
+    right?: boolean;
+    wrong?: boolean;
+}
+
+export interface INewWord {
     word?: string;
     translation?: string;
     sentence?: string;

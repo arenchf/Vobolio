@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Dictionary, Category, Word
+from .models import Dictionary, Category, Word,TrainingDay
 from django.urls import reverse
 from django.utils.html import format_html
 
@@ -27,8 +27,11 @@ class WordAdmin(admin.ModelAdmin):
 
     @admin.display(ordering="created_by")
     def link_to_user(self, obj):
-        link = reverse("admin:authentication_user_change", args=[obj.created_by.id])
-        return format_html('<a href="{}">{}</a>', link, obj.created_by)
+        if(obj.created_by):
+            link = reverse("admin:authentication_user_change", args=[obj.created_by.id])
+            return format_html('<a href="{}">{}</a>', link, obj.created_by)
+        else:
+            return format_html('<a href="#">Anonym</a>')
     
     link_to_user.short_description = 'Created By'
     
@@ -42,4 +45,6 @@ class WordAdmin(admin.ModelAdmin):
 
 admin.site.register(Dictionary,DictionaryAdmin)
 admin.site.register(Category)
+admin.site.register(TrainingDay)
 admin.site.register(Word,WordAdmin)
+# admin.site.register(Word)

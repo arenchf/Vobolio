@@ -1,0 +1,34 @@
+.c-loader-spinner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    &.start {
+        justify-content: flex-start;
+    }
+    &.end {
+        justify-content: flex-end;
+    }
+    svg {
+        path {
+            transform-origin: center;
+            &:nth-child(1) {
+                -webkit-animation: rotating 2s linear infinite;
+                animation: rotating 2s linear infinite;
+            }
+            &:nth-child(2) {
+                -webkit-animation: rotating 2s linear infinite reverse;
+                animation: rotating 2s linear infinite reverse;
+            }
+        }
+    }
+}
+
+@keyframes rotating {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}

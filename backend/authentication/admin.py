@@ -37,7 +37,7 @@ class UserAdmin(admin.ModelAdmin):
     list_display = ("username", "email", "is_staff")
     list_filter = ("is_staff", "is_active","is_verified", "groups")
     search_fields = ("username", "email")
-    readonly_fields = ("date_joined","last_login","user_permissions")
+    readonly_fields = ("date_joined","last_login","user_permissions","main_language")
     
     # exclude = ("name","location","public","img","main_language","email","username")
     ordering = ("username",)

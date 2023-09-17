@@ -14,6 +14,11 @@ DEBUG = int(os.environ.get('DEBUG',env("DEBUG",default=1)))
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS',env("ALLOWED_HOSTS",default="")).split(' ')
 CORS_ALLOWED_ORIGINS = os.environ.get('CORS_ALLOWED_ORIGINS',env("CORS_ALLOWED_ORIGINS",default="")).split(' ')
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://vobolio.com',
+#     'https://www.vobolio.com'
+# ]
+CSRF_TRUSTED_ORIGINS = os.environ.get('CSRF_TRUSTED_ORIGINS',env("CSRF_TRUSTED_ORIGINS",default="")).split(' ')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,10 +43,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://vobolio.com',
-    'https://www.vobolio.com'
-]
 
 ROOT_URLCONF = 'core.urls'
 
@@ -105,12 +106,12 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-    'PAGE_SIZE': 100
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=90),
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
@@ -133,9 +134,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "/staticfiles/"
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/api/uploads/'
+MEDIA = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 

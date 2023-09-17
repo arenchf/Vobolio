@@ -1,30 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-html {
-    background-color: white;
-}
-body {
-    margin: 0;
-    font-family: "Nunito", sans-serif;
-    #root {
+// @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+    :root {
+        --color-back: 248 249 250;
+        --color-front: 255 255 255;
+        --color-active: 240 240 240;
+        --color-border: 229 231 235;
+        --color-text: 0 0 0;
+        --color-danger: 236 81 89;
+    }
+
+    :root body[data-theme="dark"] {
+        --color-back: 30 30 30;
+        --color-front: 45 45 45;
+        --color-active: 60 60 60;
+        --color-border: 75 75 75;
+        --color-text: 255 255 255;
+        --color-danger: 236 81 89;
     }
 }
 
-.beta-top {
-    overflow: hidden;
-    top: 0px;
-    right: 0px;
-    z-index: 1000;
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    pointer-events: none;
+:root {
+    // --test-color: rgb(101, 101, 101);
+    --boadf: rgb(248, 249, 250);
+    --main-color: rgb(249, 159, 57);
+    --ttttt-color: rgb(50, 50, 50);
+    --secondary-color: rgb(255, 135, 135);
+    --danger-color: rgb(236, 81, 89);
+    --toastify-z-index: 9999999;
+    --border-color: #ccc;
 }
-.beta-banner {
-    position: absolute;
-    text-align: center;
-    background-color: red;
-    width: 200%;
-    top: 20%;
-    right: 20%;
-    transform: translate(50%, -50%) rotate(45deg);
+
+html {
+    // background-color: white;
+    height: 100%;
+
+    body {
+        // @apply bg-red-500;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        height: 100%;
+        #root {
+            height: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    // .Toastify__toast {
+    //     margin: 8px;
+    //     border-radius: 1.5rem !important;
+    // }
+    .Toastify__toast-container--bottom-right {
+        bottom: 64px !important;
+    }
+    .Toastify__toast-container {
+        z-index: 999999 !important;
+    }
 }

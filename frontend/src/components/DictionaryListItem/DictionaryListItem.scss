@@ -1,10 +1,10 @@
-.c-dictionary {
+.c-dictionary-item {
     display: flex;
     flex-direction: row;
-    border-radius: 25px 4px 4px 25px;
-    // border: 1px solid #ccc;
+    border-radius: 24px;
     box-sizing: border-box;
-    height: 50px;
+    // height: 50px;
+    padding: 16px;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 100%;
@@ -12,6 +12,7 @@
     align-items: center;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
     .left {
         display: flex;
         flex: 0 1 auto;
@@ -29,37 +30,69 @@
         }
         .flag-wrapper {
             // box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            height: 40px;
-            width: 40px;
-            margin-left: 5px;
+            height: 60px;
+            width: 60px;
+            // margin-left: 5px;
             flex-shrink: 0;
-            border-radius: 25px;
+            // border-radius: 25px;
+            border-radius: 16px;
             overflow: hidden;
-            transition: transform 0.1s ease-in-out;
+            transition: transform 0.05s ease-in-out;
             img {
                 width: 100%;
                 height: 100%;
             }
         }
-        // span {
-        //     text-transform: uppercase;
-        // }
     }
     .right {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
-        padding-right: 20px;
+        // padding-right: 20px;
+        // position: relative;
         .word-percentage {
             font-size: small;
             // font-size: large;
         }
+
+        .words {
+            font-size: 0.8em;
+            display: flex;
+            flex-direction: row;
+            gap: 2px;
+            span:first-child {
+                color: rgb(18, 203, 18);
+            }
+        }
+
+        // .progress {
+        //     position: absolute;
+        //     background-color: var(--main-color);
+        //     width: 10px;
+        //     bottom: 0;
+        //     right: 0;
+        //     z-index: 15;
+        //     // &::after {
+        //     // }
+        // }
+        // .progress-background {
+        //     position: absolute;
+        //     // content: "";
+        //     bottom: 0;
+        //     right: 0;
+        //     width: 10px;
+        //     background-color: #ccc;
+        //     height: 50px;
+        //     z-index: 10;
+        //     // z-index: -1;
+        // }
     }
 
     &:hover {
         .left {
             .flag-wrapper {
+                // transform: scale(1.25);
                 transform: scale(1.1);
             }
         }

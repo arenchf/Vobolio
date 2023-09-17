@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#1e1e1e" />
     <meta
       name="description"
       content="Create Dictionaries | Learn Foreign Words | Train | Socialize"
@@ -15,6 +15,74 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+    </div>
+    <div id="loader">
+      <style>
+        html{
+          height: 100%;
+        }
+        body{
+          margin: 0;
+          background-color: #fff;
+          width: 100%;
+          height: 100%;
+          color: black;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        body[data-theme="dark"] {
+          background-color: #1e1e1e;
+          color: white;
+        }
+
+        /* #root{
+          width: 100%;
+          height: 100%;
+        } */
+        .root-loading{
+          /* box-sizing: border-box;
+
+          width: 100%;
+          height: 100%; */
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        svg.loading-splash{
+          animation: spinLoader 1s linear infinite;
+          width: 100%;
+          height: 100%;
+        }
+
+        @-moz-keyframes spinLoader { 100% { -moz-transform: rotate(360deg); } }
+        @-webkit-keyframes spinLoader { 100% { -webkit-transform: rotate(360deg); } }
+        @keyframes spinLoader { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } } 
+      </style>
+      <div class="root-loading" >
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-loader-2 loading-splash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M12 3a9 9 0 1 0 9 9"></path>
+       </svg>
+       <span>Loading</span>
+       <script>
+        theme = localStorage.getItem("theme") ??
+            (window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+                ? "dark"
+                : "light") ??
+            "light";
+        document.querySelector("[name='theme-color']")?.remove();
+        var meta = document.createElement("meta");
+        meta.setAttribute("name", "theme-color");
+        meta.setAttribute("content", theme === "dark" ? "#1e1e1e" : "#fff");
+        document.getElementsByTagName("head")[0].appendChild(meta);
+        document.body.dataset.theme = theme;
+       </script>
+      </div>
+    </div>
+      
   </body>
 </html>

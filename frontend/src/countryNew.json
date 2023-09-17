@@ -1,0 +1,550 @@
+[
+    
+    {
+        "capital": "Tirana",
+        "code": "al",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/al.svg",
+        "flag_4x3": "flags/4x3/al.svg",
+        "iso": true,
+        "name": "Albania",
+        "languaguage": "Albanian"
+    },
+    {
+        "capital": "Buenos Aires",
+        "code": "ar",
+        "continent": "South America",
+        "flag_1x1": "flags/1x1/ar.svg",
+        "flag_4x3": "flags/4x3/ar.svg",
+        "iso": true,
+        "name": "Argentina",
+        "language": "Spanish"
+    },
+
+    {
+        "capital": "Yerevan",
+        "code": "am",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/am.svg",
+        "flag_4x3": "flags/4x3/am.svg",
+        "iso": true,
+        "name": "Armenia",
+        "language": "Armenian"
+    },
+
+    {
+        "capital": "Vienna",
+        "code": "at",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/at.svg",
+        "flag_4x3": "flags/4x3/at.svg",
+        "iso": true,
+        "name": "Austria",
+        "language": "German"
+    },
+
+    {
+        "capital": "Sarajevo",
+        "code": "ba",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/ba.svg",
+        "flag_4x3": "flags/4x3/ba.svg",
+        "iso": true,
+        "name": "Bosnia and Herzegovina",
+        "language": "Bosnian"
+    },
+    {
+        "capital": "Pretoria",
+        "code": "za",
+        "continent": "Africa",
+        "flag_1x1": "flags/1x1/za.svg",
+        "flag_4x3": "flags/4x3/za.svg",
+        "iso": true,
+        "name": "South Africa",
+        "language": "Zulu"
+    },
+
+    {
+        "capital": "Brasília",
+        "code": "br",
+        "continent": "South America",
+        "flag_1x1": "flags/1x1/br.svg",
+        "flag_4x3": "flags/4x3/br.svg",
+        "iso": true,
+        "name": "Brazil",
+        "language": "Portuguese"
+    },
+
+    {
+        "capital": "Sofia",
+        "code": "bg",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/bg.svg",
+        "flag_4x3": "flags/4x3/bg.svg",
+        "iso": true,
+        "name": "Bulgaria",
+        "language": "Bulgarian"
+    },
+
+    {
+        "capital": "Beijing",
+        "code": "cn",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/cn.svg",
+        "flag_4x3": "flags/4x3/cn.svg",
+        "iso": true,
+        "name": "China",
+        "language": "Mandarin"
+    },
+    {
+        "capital": "Zagreb",
+        "code": "hr",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/hr.svg",
+        "flag_4x3": "flags/4x3/hr.svg",
+        "iso": true,
+        "name": "Croatia",
+        "language": "Croatian"
+    },
+    {
+        "capital": "Quito",
+        "code": "ec",
+        "continent": "South America",
+        "flag_1x1": "flags/1x1/ec.svg",
+        "flag_4x3": "flags/4x3/ec.svg",
+        "iso": true,
+        "name": "Ecuador",
+        "language": "Spanish"
+    },
+
+    {
+        "capital": "Prague",
+        "code": "cz",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/cz.svg",
+        "flag_4x3": "flags/4x3/cz.svg",
+        "iso": true,
+        "name": "Czech Republic",
+        "language": "Czech"
+    },
+    {
+        "capital": "Kinshasa",
+        "code": "cd",
+        "continent": "Africa",
+        "flag_1x1": "flags/1x1/cd.svg",
+        "flag_4x3": "flags/4x3/cd.svg",
+        "iso": true,
+        "name": "Democratic Republic of the Congo",
+        "language": "Swahili"
+    },
+    {
+        "capital": "Copenhagen",
+        "code": "dk",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/dk.svg",
+        "flag_4x3": "flags/4x3/dk.svg",
+        "iso": true,
+        "name": "Denmark",
+        "language": "Danish"
+    },
+    {
+        "capital": "London",
+        "code": "gb-eng",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/gb-eng.svg",
+        "flag_4x3": "flags/4x3/gb-eng.svg",
+        "iso": false,
+        "name": "Britain",
+        "language": "English"
+    },
+    {
+        "capital": "Tallinn",
+        "code": "ee",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/ee.svg",
+        "flag_4x3": "flags/4x3/ee.svg",
+        "iso": true,
+        "name": "Estonia",
+        "language": "Estonian"
+    },
+    {
+        "capital": "Helsinki",
+        "code": "fi",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/fi.svg",
+        "flag_4x3": "flags/4x3/fi.svg",
+        "iso": true,
+        "name": "Finland",
+        "language": "Finnish"
+    },
+    {
+        "capital": "Paris",
+        "code": "fr",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/fr.svg",
+        "flag_4x3": "flags/4x3/fr.svg",
+        "iso": true,
+        "name": "France",
+        "language": "French"
+    },
+    {
+        "capital": "Tbilisi",
+        "code": "ge",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/ge.svg",
+        "flag_4x3": "flags/4x3/ge.svg",
+        "iso": true,
+        "name": "Georgia",
+        "language": "Georgian"
+    },
+    {
+        "capital": "Berlin",
+        "code": "de",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/de.svg",
+        "flag_4x3": "flags/4x3/de.svg",
+        "iso": true,
+        "name": "Germany",
+        "language": "German"
+    },
+    {
+        "capital": "Athens",
+        "code": "gr",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/gr.svg",
+        "flag_4x3": "flags/4x3/gr.svg",
+        "iso": true,
+        "name": "Greece",
+        "language": "Greek"
+    },
+    {
+        "capital": "Hong Kong",
+        "code": "hk",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/hk.svg",
+        "flag_4x3": "flags/4x3/hk.svg",
+        "iso": true,
+        "name": "Hong Kong",
+        "language": "Mandarin"
+    },
+    {
+        "capital": "Budapest",
+        "code": "hu",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/hu.svg",
+        "flag_4x3": "flags/4x3/hu.svg",
+        "iso": true,
+        "name": "Hungary",
+        "lanaguge": "Magyar"
+    },
+    {
+        "capital": "New Delhi",
+        "code": "in",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/in.svg",
+        "flag_4x3": "flags/4x3/in.svg",
+        "iso": true,
+        "name": "India",
+        "language": "Hindi"
+    },
+    {
+        "capital": "Jakarta",
+        "code": "id",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/id.svg",
+        "flag_4x3": "flags/4x3/id.svg",
+        "iso": true,
+        "name": "Indonesia",
+        "language": "Indonesian"
+    },
+    {
+        "capital": "Dublin",
+        "code": "ie",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/ie.svg",
+        "flag_4x3": "flags/4x3/ie.svg",
+        "iso": true,
+        "name": "Ireland",
+        "language": "Irish"
+    },
+    {
+        "capital": "Rome",
+        "code": "it",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/it.svg",
+        "flag_4x3": "flags/4x3/it.svg",
+        "iso": true,
+        "name": "Italy",
+        "language": "Italian"
+    },
+    {
+        "capital": "Kingston",
+        "code": "jm",
+        "continent": "North America",
+        "flag_1x1": "flags/1x1/jm.svg",
+        "flag_4x3": "flags/4x3/jm.svg",
+        "iso": true,
+        "name": "Jamaica",
+        "language": "Jamaican"
+    },
+    {
+        "capital": "Taipei",
+        "code": "tw",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/tw.svg",
+        "flag_4x3": "flags/4x3/tw.svg",
+        "iso": true,
+        "name": "Taiwan",
+        "language": "Mandarin"
+    },
+    {
+        "capital": "Tokyo",
+        "code": "jp",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/jp.svg",
+        "flag_4x3": "flags/4x3/jp.svg",
+        "iso": true,
+        "name": "Japan",
+        "language": "Japanese"
+    },
+    {
+        "capital": "Nairobi",
+        "code": "ke",
+        "continent": "Africa",
+        "flag_1x1": "flags/1x1/ke.svg",
+        "flag_4x3": "flags/4x3/ke.svg",
+        "iso": true,
+        "name": "Kenya",
+        "language": "Suaheli"
+    },
+    {
+        "capital": "Riga",
+        "code": "lv",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/lv.svg",
+        "flag_4x3": "flags/4x3/lv.svg",
+        "iso": true,
+        "name": "Latvia",
+        "language": "Latvian"
+    },
+    {
+        "capital": "Vilnius",
+        "code": "lt",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/lt.svg",
+        "flag_4x3": "flags/4x3/lt.svg",
+        "iso": true,
+        "name": "Lithuania",
+        "language": "Lithuanian"
+    },
+    {
+        "capital": "Kuala Lumpur",
+        "code": "my",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/my.svg",
+        "flag_4x3": "flags/4x3/my.svg",
+        "iso": true,
+        "name": "Malaysia",
+        "language": "Malay"
+    },
+    {
+        "capital": "Mexico City",
+        "code": "mx",
+        "continent": "North America",
+        "flag_1x1": "flags/1x1/mx.svg",
+        "flag_4x3": "flags/4x3/mx.svg",
+        "iso": true,
+        "name": "Mexico",
+        "language": "Spanish"
+    },
+    {
+        "capital": "Naypyidaw",
+        "code": "mm",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/mm.svg",
+        "flag_4x3": "flags/4x3/mm.svg",
+        "iso": true,
+        "name": "Myanmar",
+        "language": "Burmese"
+    },
+    {
+        "capital": "Amsterdam",
+        "code": "nl",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/nl.svg",
+        "flag_4x3": "flags/4x3/nl.svg",
+        "iso": true,
+        "name": "Netherlands",
+        "language": "Dutch"
+    },
+    {
+        "capital": "Oslo",
+        "code": "no",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/no.svg",
+        "flag_4x3": "flags/4x3/no.svg",
+        "iso": true,
+        "name": "Norway",
+        "language": "Norwegian"
+    },
+    {
+        "capital": "Manila",
+        "code": "ph",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/ph.svg",
+        "flag_4x3": "flags/4x3/ph.svg",
+        "iso": true,
+        "name": "Philippines",
+        "language": "Tagalog"
+    },
+    {
+        "capital": "Warsaw",
+        "code": "pl",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/pl.svg",
+        "flag_4x3": "flags/4x3/pl.svg",
+        "iso": true,
+        "name": "Poland",
+        "language": "Polish"
+    },
+    {
+        "capital": "Lisbon",
+        "code": "pt",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/pt.svg",
+        "flag_4x3": "flags/4x3/pt.svg",
+        "iso": true,
+        "name": "Portugal",
+        "language": "Portuguese"
+    },
+    {
+        "capital": "Bucharest",
+        "code": "ro",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/ro.svg",
+        "flag_4x3": "flags/4x3/ro.svg",
+        "iso": true,
+        "name": "Romania",
+        "language": "Romanian"
+    },
+    {
+        "capital": "Moscow",
+        "code": "ru",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/ru.svg",
+        "flag_4x3": "flags/4x3/ru.svg",
+        "iso": true,
+        "name": "Russia",
+        "language": "Russian"
+    },
+    {
+        "capital": "Phnom Penh",
+        "code": "kh",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/kh.svg",
+        "flag_4x3": "flags/4x3/kh.svg",
+        "iso": true,
+        "name": "Cambodia",
+        "language": "Khmer"
+    },
+    {
+        "capital": "Ottawa",
+        "code": "ca",
+        "continent": "North America",
+        "flag_1x1": "flags/1x1/ca.svg",
+        "flag_4x3": "flags/4x3/ca.svg",
+        "iso": true,
+        "name": "Canada",
+        "language": "English"
+    },
+    {
+        "capital": "Belgrade",
+        "code": "rs",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/rs.svg",
+        "flag_4x3": "flags/4x3/rs.svg",
+        "iso": true,
+        "name": "Serbia",
+        "language": "Serbian"
+    },
+    {
+        "capital": "Singapore",
+        "code": "sg",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/sg.svg",
+        "flag_4x3": "flags/4x3/sg.svg",
+        "iso": true,
+        "name": "Singapore",
+        "language": "Malay"
+    },
+    {
+        "capital": "Seoul",
+        "code": "kr",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/kr.svg",
+        "flag_4x3": "flags/4x3/kr.svg",
+        "iso": true,
+        "name": "South Korea",
+        "language": "Korean"
+    },
+    {
+        "capital": "Madrid",
+        "code": "es",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/es.svg",
+        "flag_4x3": "flags/4x3/es.svg",
+        "iso": true,
+        "name": "Spain",
+        "language": "Spanish"
+    },
+    {
+        "capital": "Stockholm",
+        "code": "se",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/se.svg",
+        "flag_4x3": "flags/4x3/se.svg",
+        "iso": true,
+        "name": "Sweden",
+        "language": "Swedish"
+    },
+    {
+        "capital": "Ankara",
+        "code": "tr",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/tr.svg",
+        "flag_4x3": "flags/4x3/tr.svg",
+        "iso": true,
+        "name": "Türkiye",
+        "language": "Turkish"
+    },
+    {
+        "capital": "Kiev",
+        "code": "ua",
+        "continent": "Europe",
+        "flag_1x1": "flags/1x1/ua.svg",
+        "flag_4x3": "flags/4x3/ua.svg",
+        "iso": true,
+        "name": "Ukraine",
+        "language": "Ukrainian"
+    },
+    {
+        "capital": "Washington, D.C.",
+        "code": "us",
+        "continent": "North America",
+        "flag_1x1": "flags/1x1/us.svg",
+        "flag_4x3": "flags/4x3/us.svg",
+        "iso": true,
+        "name": "United States of America",
+        "language": "English (US)"
+    },
+    {
+        "capital": "Hanoi",
+        "code": "vn",
+        "continent": "Asia",
+        "flag_1x1": "flags/1x1/vn.svg",
+        "flag_4x3": "flags/4x3/vn.svg",
+        "iso": true,
+        "name": "Vietnam",
+        "language": "Vietnamese"
+    }
+]

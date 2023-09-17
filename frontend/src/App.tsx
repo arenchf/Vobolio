@@ -1,29 +1,34 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import "./App.scss";
-import LandingPage from "./pages/LandingPage/LandingPage";
 import {
     BrowserRouter as Router,
     Routes,
     Route,
     Navigate,
-    useLocation,
 } from "react-router-dom";
-import Layout from "./components/Layout/Layout";
-import LoginPage from "./pages/LoginPage/LoginPage";
-import Dashboard from "./pages/Dashboard/Dashboard";
-import AuthContext, { AuthContextProvider } from "./contexts/AuthContext";
 import { ToastContainer } from "react-toastify";
-import RegisterPage from "./pages/Register/RegisterPage";
-import DictioanaryPage from "./pages/DictionaryPage/DictionaryPage";
-import "./Styles.scss";
-import TrainingPage from "./pages/TrainingPage/TrainingPage";
-import SocialPage from "./pages/SocialPage/SocialPage";
-import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import AuthContext, { AuthContextProvider } from "./contexts/AuthContext";
+import LandingLayout from "./components/LandingLayout/LandingLayout";
+import LandingPage from "./pages/LandingPage/LandingPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import LoginPage from "./pages/LoginPagePage/LoginPage";
 import PrivacyPolicy from "./pages/StaticPages/PrivacyPolicy/PrivacyPolicy";
 import About from "./pages/StaticPages/About/About";
 import TermsOfUse from "./pages/StaticPages/TermsOfUse/TermsOfUse";
-import LandingLayout from "./components/LandingLayout/LandingLayout";
 import CookiePolicy from "./pages/StaticPages/CookiesPolicy/CookiePolicy";
+import Layout from "./components/Layout/Layout";
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
+import TrainingSetupPage from "./pages/TrainingSetupPage/TrainingSetupPage";
+import SocialPage from "./pages/SocialPage/SocialPage";
+import ProfilePage from "./pages/ProfilePage/ProfilePagePage";
+import DictionaryList from "./pages/DictionaryListPage/DictionaryListPage";
+import NewDictionaryPage from "./pages/NewDictionaryPage/NewDictionaryPage";
+import EditDictionaryPage from "./pages/EditDictionaryPage/EditDictionaryPage";
+import DictionaryDetailPage from "./pages/DictionaryDetailPage/DictionaryDetailPage";
+import NewWordPage from "./pages/NewWordPage/NewWordPage";
+import EditWordPage from "./pages/EditWordPage/EditWordPage";
+import TrainingPage from "./pages/TrainingPage/TrainingPage";
+
 function App() {
     return (
         <Router>
@@ -57,26 +62,60 @@ function App() {
                             path="/home"
                             element={
                                 <ProtectedRoute accessBy="authenticated">
-                                    <Dashboard />
+                                    <DashboardPage />
                                 </ProtectedRoute>
                             }
                         />
+                        <Route path="/user?/:username?">
+                            <Route
+                                path="dictionaries"
+                                element={<DictionaryList />}
+                            />
+                            {/* <Route path="" element={<DictionaryList />} /> */}
+                        </Route>
                         <Route
+                            path="/dictionaries/:dictionaryId/"
+                            element={
+                                <DictionaryDetailPage></DictionaryDetailPage>
+                            }
+                        ></Route>
+                        <Route
+                            path="/dictionaries/add"
+                            element={<NewDictionaryPage></NewDictionaryPage>}
+                        ></Route>
+                        <Route
+                            path="/dictionaries/:dictionaryId/edit"
+                            element={<EditDictionaryPage></EditDictionaryPage>}
+                        ></Route>
+                        <Route
+                            path="/dictionaries/:dictionaryId/words/add"
+                            element={<NewWordPage></NewWordPage>}
+                        ></Route>
+                        <Route
+                            path="/words/:wordId"
+                            element={<EditWordPage></EditWordPage>}
+                        ></Route>
+                        {/* <Route
                             path="/dictionaries"
                             element={
                                 <ProtectedRoute accessBy="authenticated">
                                     <DictioanaryPage />
                                 </ProtectedRoute>
                             }
-                        />
+                        /> */}
                         <Route
-                            path="/train"
+                            path="/training"
                             element={
                                 <ProtectedRoute accessBy="authenticated">
-                                    <TrainingPage />
+                                    <TrainingSetupPage />
                                 </ProtectedRoute>
                             }
                         />
+                        <Route
+                            path="/training/:dictionaryId/:modeName"
+                            element={<TrainingPage></TrainingPage>}
+                        />
+
                         <Route
                             path="/social"
                             element={
@@ -100,6 +139,7 @@ function App() {
                     draggable
                     pauseOnHover
                     closeOnClick
+                    // autoClose={false}
                     pauseOnFocusLoss={false}
                 />
             </AuthContextProvider>

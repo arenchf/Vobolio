@@ -40,18 +40,13 @@ class Category(models.Model):
 class Word(models.Model):
     # id                      = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     word                    = models.CharField(max_length=255,null=False)
-    translation             = models.CharField(max_length=255,null=True)
+    translation             = models.CharField(max_length=255,null=True, blank=True)
     sentence                = models.TextField(blank=True)
     sentence_translation    = models.TextField(blank=True)
     dictionary              = models.ForeignKey(Dictionary,related_name="words",on_delete=models.CASCADE,null=False)
     progress                = models.IntegerField(
         blank=True,
-        editable=False,
         default=0,
-        validators=[
-            MaxValueValidator(100),
-            MinValueValidator(0)
-        ]
     )
     earned                  = models.BooleanField(default=False,null=False,blank=True)
     categories              = models.ManyToManyField(Category,blank=True)
@@ -64,7 +59,16 @@ class Word(models.Model):
     last_decline            = models.DateField(null=True,blank=True)
 
     def __str__(self) -> str:
-        return "{}({})->{}({})".format(self.word,self.dictionary.language,self.translation,self.created_by.main_language)
-
+            return "{}({}) -> {}".format(self.word,self.dictionary.language,self.translation)
 class TrainingDay(models.Model):
-    day = models.DateField(null=False)
+    created_at    = models.DateTimeField(auto_now_add=True)
+    created_by              = models.ForeignKey(
+        "authentication.User", on_delete=models.CASCADE
+    )
+    total_answers = models.IntegerField(default=0)
+    right_answers = models.IntegerField( default=0)
+    dictionary    = models.ForeignKey(Dictionary,related_name="trainings",on_delete=models.SET_NULL,null=True,blank=True, default=None)
+
+
+
+

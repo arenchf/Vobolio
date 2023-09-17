@@ -11,4 +11,5 @@ urlpatterns = [
     path('users/', UserListView.as_view()),
     path('users/<str:username>/', UserDetailView.as_view()),
     path('token/create/', UserCreateView.as_view(), name="create_user"),
+    # path("users/<str:username>/")
 ]

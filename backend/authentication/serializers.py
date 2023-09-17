@@ -2,15 +2,48 @@
 from rest_framework import serializers
 from rest_framework_simplejwt.serializers import TokenRefreshSerializer, TokenObtainPairSerializer
 from .models import User
-from django.db.models import Q
+from dictionaries.models import Word, Dictionary
+from django.db.models import Q, Count, Prefetch
+
+
 
 
 class UserSelfSerializer(serializers.ModelSerializer):
-    
+    # total_words = serializers.SerializerMethodField()
+    dictionary_count = serializers.IntegerField(
+        source='dictionaries.count', 
+        read_only=True
+    )
+    word_count = serializers.SerializerMethodField()
+    learned_words_count = serializers.SerializerMethodField()
     class Meta:
         model = User
         exclude = ("id","password","is_superuser","is_active","is_verified","groups","user_permissions")
+    
+    def get_word_count(self,instance):
+        return instance.dictionaries.aggregate(word_count=Count("words"))["word_count"]
+    
+    def get_learned_words_count(self,instance):
+        return instance.dictionaries.aggregate(learned_words_count=Count("words",filter=Q(words__earned=True)))["learned_words_count"]
+        # return instance.dictionaries.filter(words__earned=True).aggregate(learned_words_count=Count("words"))["learned_words_count"]
+    
+
+    # def to_representation(self, instance):
+    #     rep = super().to_representation(instance)
+    #     user_dictionaries = instance.all().prefetch_related(Prefetch('dictionaries', Dictionary.objects.annotate(word_count=Count('words'))))
+    #     # user_dictionaries = instance.dictionaries.annotate(word_count=Count("words"),learned_words_count=Count("words",filter=Q(words__earned=True)))
+    #     print(user_dictionaries[0].word_count)
+    #     # rep["total_words"] = user_dictionaries.word_count
+    #     # rep["learned_words_count"] = user_dictionaries.learned_words_count
+    #     rep["total_dictionaries"] = user_dictionaries.count()
         
+    #     return rep
+
+    # def get_total_words(self,instance:User):
+    #     print(instance)
+    #     for dictionary in instance.dictionaries:
+    #         print(dictionary.name)
+
 
 
 class UserPublicSerializer(serializers.ModelSerializer):
@@ -37,9 +70,10 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
         token = super(CustomTokenObtainPairSerializer, cls).get_token(user)
-        print("AAA",user.username)
         token["username"] = user.username
+        token["email"] = user.email
         token["main_language"] = user.main_language
+        token["difficulty"] = user.difficulty
         if(user.img):
             token["img"] = user.img.url
         else:

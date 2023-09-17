@@ -1,2 +1,4 @@
 .env.*.prod
 .env.*.dev
+docker-compose.prod.yml
+docker-compose.dev.yml

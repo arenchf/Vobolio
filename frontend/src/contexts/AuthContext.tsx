@@ -54,13 +54,13 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
     const logout = () => {
         localStorage.removeItem("refresh");
         localStorage.removeItem("access");
+        navigate("/");
         setUser(null);
         toast.success("Success");
 
-        setTimeout(() => {
-            navigate("/");
-            window.location.reload();
-        }, 1000);
+        // setTimeout(() => {
+        //     window.location.reload();
+        // }, 1000);
     };
     const refresh = async () => {
         const response = await axiosInstance.post("api/v1/token/refresh/", {
